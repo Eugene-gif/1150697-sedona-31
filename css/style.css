@@ -1,0 +1,215 @@
+/*F o n t s*/
+
+@font-face {
+  font-family: "PT Sans";
+  src:
+    url("../fonts/PTSans.woff2") format("woff2"),
+    url("../fonts/PTSans.woff") format("woff");
+  font-weight:  400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src:
+    url("../fonts/PTSans-Bold.woff2") format("woff2"),
+    url("../fonts/PTSans-Bold.woff") format("woff");
+  font-weight:  700;
+  font-style: normal;
+}
+
+/*V a r i a b l e s*/
+:root {
+  --basic-black: #000000;
+  --basic-black2: #333333;
+  --basic-blue: #81B3D2;
+  --basic-white: #FFFFFF;
+  --basic-grey: #EEEEEE;
+  --basic-grey2: #F2F2F2;
+  --basic-brown: #766357;
+  --basic-brown2: #666666;
+  --basic-footer: rgba(255, 255, 255, 0.9);
+  --special-brown: #604E43;
+  --special-brown2: #503E33;
+}
+
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: bold;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+}
+
+/*ТЭГИ нужно заменить на классы*/
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*NAVIGATION*/
+.nav {
+  line-height: 26px;
+}
+
+.site-nav {
+  list-style: none;
+}
+
+/*Сделать HOOVERы*/
+
+.familiarity {
+  text-align: center;
+}
+
+.familiarity-bg {
+  background-image: url("../img/background-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-width: 1200px;
+  height: 510px;
+}
+
+.fam-text-1,
+.fam-text-2 {
+  line-height: 26px;
+}
+
+.fam-text-1 {
+  font-size: 21px;
+}
+
+.advantage-1 {
+  background-color: #81B3D2;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.advantage-p-1 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.features-list {
+  list-style: none;
+  color: #333333;
+}
+
+.feature-item-caption {
+  font-size: 21px;
+  color: var(--basic-black);
+}
+
+.features2 {
+  background-color: var(--basic-grey);
+}
+
+.features,
+.features2 {
+  text-align: center;
+}
+
+.search {
+  text-align: center;
+}
+
+.search-caption {
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.search-text {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.map {
+  background-color: darksalmon;
+}
+
+.btn {
+  padding: 30px 125px 30px 125px;
+  font-size: 21px;
+  line-height: 26px;
+  background-color: var(--basic-brown);
+  color: var(--basic-white);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--special-brown);
+}
+
+.btn:active {
+  background-color: var(--special-brown2);
+}
+
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  text-align: center;
+  vertical-align: center;
+  background-color: var(--basic-blue);
+  padding: 10px;
+}
+
+.contacts {
+  display: flex;
+}
+
+/*C A T A L O G*/
+
+.bc-catalog {
+  background-image: url(../img/img-catalog/background.jpg);
+  background-repeat: no-repeat;
+}
+
+.filter {
+  display: flex;
+  color: var(--basic-white);
+}
+
+.filter-list {
+  list-style: none;
+}
+
+.min-price,
+.max-price {
+  background-color: transparent;
+}
+
+.filter-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: inherit;
+}
+
+.fieldset-filter-btn {
+  text-align: center;
+}
+
+.filter-res {
+  display: inline-flex;
+}
+
+.gallery {
+  display: block;
+  text-align: center;
+}
+
+/*F O O T E R*/
+
+.main-footer {
+  display: flex;
+}
+
+/*.contacts {} */
