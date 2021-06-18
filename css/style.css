@@ -41,6 +41,7 @@
   --basic-footer: rgba(255, 255, 255, 0.9);
   --special-brown: #604E43;
   --special-brown2: #503E33;
+  --grey-border: #e5e5e5;
 }
 
 .page {
@@ -66,26 +67,8 @@
   align-content: start;
 }
 
-.main-header {
-margin-bottom: 70px;
-outline: 5px solid rgba(0, 255, 0, 0.7);
-outline-offset: -5px;
-}
 
-.nav {
-display: grid;
-grid-template-columns: 1fr 1fr;
-}
 
-.nav-logo {
-  outline: 5px solid rgba(255, 0, 0, 0.3);
-  outline-offset: -5px;
-  justify-self: center;
-}
-
-.site-nav {
-  outline: 5px solid rgba(109, 61, 21, 0.4);
-}
 
 /*ТЭГИ нужно заменить на классы*/
 a {
@@ -98,20 +81,48 @@ img {
 }
 
 /*NAVIGATION*/
-.nav {
-  display: grid;
-  line-height: 26px;
-}
 
+.main-header {
+margin-bottom: -20px;
+}
+/*.nav {}
+
+.nav-logo {}
+*/
 .site-nav {
   display: grid;
+  grid-template-columns: 240px 240px 240px 240px 240px;
+  grid-template-rows: 56px;
   list-style: none;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.nav-list-item1 {
+  grid-column: 1/2;
+}
+
+.nav-list-item2 {
+  grid-column: 2/3;
+}
+
+.nav-list-item3 {
+  grid-column: 3/4;
+  padding-top: 0px;
+  margin-top: -20px;
+  z-index: 2;
+}
+
+.nav-list-item4 {
+  grid-column: 4/5;
 }
 
 /*Сделать HOOVERы*/
 
 .familiarity {
   display: grid;
+  margin-top: -20px;
+  grid-template-rows: 510px 215px;
   text-align: center;
   width: 1200px;
   height: 725px;
@@ -122,8 +133,18 @@ img {
   background-repeat: no-repeat;
   background-position: top center;
   min-width: 1200px;
-  height: 510px;
+  /*height: 510px;*/
   grid-template-columns: 1fr;
+}
+
+.fam-welcome {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.familiarity-text {
+  grid-column: 1fr;
+  grid-row: 2/3;
 }
 
 .fam-text-1,
@@ -310,8 +331,22 @@ grid-row: 1/2;
 }
 
 .filter {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
   color: var(--basic-white);
+}
+
+.fieldset1 {
+  grid-column: 1/2;
+}
+
+.fieldset2 {
+  grid-column: 2/3;
+}
+
+.fieldset3 {
+  grid-column: 3/4;
+  justify-items: end;
 }
 
 .filter-list {
@@ -337,8 +372,62 @@ grid-row: 1/2;
 }
 
 .gallery {
-  display: block;
+  display: grid;
+  grid-template-rows: 150px 150px 150px;
+  grid-template-columns: 1fr;
   text-align: center;
+}
+
+.gal1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border-top: 2px solid var(--grey-border);
+}
+.gal1-img {
+  grid-column: 1/2;
+}
+
+.gal1-description {
+  grid-column: 2/3;
+}
+
+.gal1-rating {
+  grid-column: 3/4;
+}
+
+.gal2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border-top: 2px solid var(--grey-border);
+}
+.gal2-img {
+  grid-column: 1/2;
+}
+
+.gal2-description {
+  grid-column: 2/3;
+}
+
+.gal2-rating {
+  grid-column: 3/4;
+}
+
+.gal3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border-top: 2px solid var(--grey-border);
+  border-bottom: 2px solid var(--grey-border);
+}
+.gal3-img {
+  grid-column: 1/2;
+}
+
+.gal3-description {
+  grid-column: 2/3;
+}
+
+.gal3-rating {
+  grid-column: 3/4;
 }
 
 /*F O O T E R*/

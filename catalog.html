@@ -16,14 +16,15 @@
   <!--HEADER-->
   <header class="main-header">
     <nav class="nav">
-      <a class="nav-logo" href="index.html">
-        <img src="img/logo.svg" width="138" height="70" alt="logo">
-      </a>
       <ul class="site-nav">
-        <li class="nav-list-item"><a href="blank.html">Информация</a></li>
-        <li class="nav-list-item"><a href="blank.html">Фото и видео</a></li>
-        <li class="nav-list-item"><a href="blank.html">Карта штата</a></li>
-        <li class="nav-list-item"><a href="catalog.html">Гостиницы</a></li>
+        <li class="nav-list-item1"><a href="blank.html">Информация</a></li>
+        <li class="nav-list-item2"><a href="catalog.html">Фото и видео</a></li>
+        <li class="nav-list-item3"><a class="nav-logo" href="index.html">
+            <img src="img/logo.svg" width="138" height="70" alt="logo">
+          </a>
+        </li>
+        <li class="nav-list-item4"><a href="blank.html">Карта штата</a></li>
+        <li class="nav-list-item5"><a href="catalog.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -31,7 +32,7 @@
   <main class="container">
     <section class="bc-catalog">
       <form class="filter">
-        <fieldset>
+        <fieldset class="fieldset1">
           <legend>Инфраструктура:</legend>
           <ul class="filter-list">
             <li>
@@ -53,7 +54,7 @@
               </label>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset2">
           <legend>Тип жилья:</legend>
           <ul class="filter-list">
             <li>
@@ -75,7 +76,7 @@
               </label>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="fieldset3">
           <legend>Стоимость в сутки, ₽:</legend>
           <label>от <input class="min-price" name="min-price" type="text" value="0"></label>
           <label>до <input class="max-price" name="max-price" type="text" value="3000"></label> <br>
@@ -96,26 +97,44 @@
         </div>
       </div>
       <div class="gallery">
-        <div>
-          <img src="img/img-catalog/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
-          <h3>Amara Resort & Spa</h3>
-          <p><span>Гостиница</span><span>От 4000 ₽</span></p>
-          <button>Подробнее</button><button>Забронировать</button><br>
-          <p><span>4 звезды</span><br> <span>Рейтинг: 8,5</span></p>
+        <div class="gal1">
+          <div class="gal1-img">
+            <img src="img/img-catalog/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
+          </div>
+          <div class="gal1-description">
+            <h3>Amara Resort & Spa</h3>
+            <p><span>Гостиница</span><span>От 4000 ₽</span></p>
+            <button>Подробнее</button><button>Забронировать</button><br>
+          </div>
+          <div class="gal1-rating">
+            <p><span>4 звезды</span><br> <span>Рейтинг: 8,5</span></p>
+          </div>
         </div>
-        <div>
-          <img src="img/img-catalog/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
-          <h3>Desert Quail Inn</h3>
-          <p><span>Мотель</span><span>От 3000 ₽</span></p>
-          <button>Подробнее</button><button>Забронировать</button><br>
-          <p><span>3 звезды</span><br> <span>Рейтинг: 8,9</span></p>
+        <div class="gal2">
+          <div class="gal2-img">
+            <img src="img/img-catalog/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
+          </div>
+          <div class="gal2-description">
+            <h3>Desert Quail Inn</h3>
+            <p><span>Мотель</span><span>От 3000 ₽</span></p>
+            <button>Подробнее</button><button>Забронировать</button><br>
+          </div>
+          <div class="gal2-rating">
+            <p><span>3 звезды</span><br> <span>Рейтинг: 8,9</span></p>
+          </div>
         </div>
-        <div>
-          <img src="img/img-catalog/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-          <h3>Villas at Poco Diablo</h3>
-          <p><span>Апартаменты</span><span>От 2000 ₽</span></p>
-          <button>Подробнее</button><button>Забронировать</button><br>
-          <p><span>3 звезды</span><br> <span>Рейтинг: 9,2</span></p>
+        <div class="gal3">
+          <div class="gal3-img">
+            <img src="img/img-catalog/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+          </div>
+          <div class="gal3-description">
+            <h3>Villas at Poco Diablo</h3>
+            <p><span>Апартаменты</span><span>От 2000 ₽</span></p>
+            <button>Подробнее</button><button>Забронировать</button><br>
+          </div>
+          <div class="gal3-rating">
+            <p><span>3 звезды</span><br> <span>Рейтинг: 9,2</span></p>
+          </div>
         </div>
       </div>
     </section>
@@ -123,12 +142,12 @@
   <!--FOOTER-->
   <footer class="main-footer">
     <div class="contacts">
-      <section class="social-contacts">
+      <div class="social-contacts">
         <p>
           #visitSEDONA<br> <a class="phone" href="tel:+78005558628">+7 800 555-86-28</a>
         </p>
-      </section>
-      <section class='social-networks'>
+      </div>
+      <div class='social-networks'>
         <div class='social-btn'>
           <a class="tw" href='#'>
             <img src='img/icon-twitter.svg' width='17' height='17' alt='icon tw'>
@@ -144,12 +163,14 @@
             <img src='img/icon-youtube.svg' width='20' height='16' alt='icon youtube'>
           </a>
         </div>
-      </section>
-      <p class="footer-copyright">
-        <a href="#">
-          <p>Website by <img src="img/logo_htmlacademy.svg"></p>
-        </a>
-      </p>
+      </div>
+      <div class="footer-site">
+        <p class="footer-copyright">
+          <a href="#">
+            <p>Website by <img src="img/logo_htmlacademy.svg"></p>
+          </a>
+        </p>
+      </div>
     </div>
   </footer>
 
