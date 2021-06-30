@@ -5,7 +5,7 @@
   src:
     url("../fonts/PTSans.woff2") format("woff2"),
     url("../fonts/PTSans.woff") format("woff");
-  font-weight:  400;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -14,7 +14,7 @@
   src:
     url("../fonts/PTSans-Bold.woff2") format("woff2"),
     url("../fonts/PTSans-Bold.woff") format("woff");
-  font-weight:  700;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -83,19 +83,26 @@ img {
 /*NAVIGATION*/
 
 .main-header {
-margin-bottom: -20px;
+  margin-bottom: -20px;
 }
+
 /*.nav {}
 
 .nav-logo {}
 */
 .site-nav {
-  display: grid;
+  /*display: grid;
   grid-template-columns: 240px 240px 240px 240px 240px;
   grid-template-rows: 56px;
   list-style: none;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: middle;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 1200px;
+  /*Нужно ли задавать ширину таким образом?*/
+  list-style: none;
 }
 
 .nav-list-item1 {
@@ -163,14 +170,15 @@ margin-bottom: -20px;
 }
 
 .adv-box-1 {
-grid-column: 1/2;
-grid-row: 1/2;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
-.adv-box-7, .adv-box-1 {
+.adv-box-7,
+.adv-box-1 {
   text-align: center;
   background-color: var(--basic-blue);
-  color:var(--basic-white);
+  color: var(--basic-white);
 }
 
 .adv-box-2 {
@@ -274,25 +282,38 @@ grid-row: 1/2;
 }
 
 .contacts {
-  display: grid;
+  /*display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: 120px;
-  text-align: center;
+  text-align: center;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*width: 1200px; /*Нужно ли задавать ширину таким образом?*/
+  list-style: none;
+  margin: 36px 0;
 }
 
-.social-contacts {
+.a {
+  color: var(--basic-black);
+}
+
+/*.social-contacts {
   grid-column: 1/2;
   grid-row: 1/2;
 }
+*/
 
 .social-networks {
-  grid-column: 2/3;
-  grid-row: 1/2;
+  /*grid-column: 2/3;
+  grid-row: 1/2;*/
+  display: flex;
+  justify-content: space-around;
 }
 
-.footer-site {
-  grid-column: -1/-2;
-}
+/*.footer-site {
+  /*grid-column: -1/-2;
+}*/
 
 .btn {
   padding: 30px 125px 30px 125px;
@@ -319,6 +340,7 @@ grid-row: 1/2;
   vertical-align: center;
   background-color: var(--basic-blue);
   padding: 10px;
+  margin-right: 10px;
 }
 
 
@@ -338,15 +360,18 @@ grid-row: 1/2;
 
 .fieldset1 {
   grid-column: 1/2;
+  border: none;
 }
 
 .fieldset2 {
   grid-column: 2/3;
+  border: none;
 }
 
 .fieldset3 {
   grid-column: 3/4;
   justify-items: end;
+  border: none;
 }
 
 .filter-list {
@@ -368,7 +393,9 @@ grid-row: 1/2;
 }
 
 .filter-res {
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 73px;
 }
 
 .gallery {
@@ -378,39 +405,64 @@ grid-row: 1/2;
   text-align: center;
 }
 
-.gal1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+.gal1, .gal2 {
+  /*display: grid;
+  grid-template-columns: 1fr 1fr 2fr;*/
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 73px;
+  align-items: flex-end;
   border-top: 2px solid var(--grey-border);
 }
-.gal1-img {
-  grid-column: 1/2;
+
+.gal1-img, .gal2-img {
+  /*grid-column: 1/2;*/
+  align-self: center;
 }
 
-.gal1-description {
-  grid-column: 2/3;
+.gal1-description, .gal2-description {
+  /*grid-column: 2/3;*/
+  margin-right: auto;
+  margin-left: 30px;
 }
 
-.gal1-rating {
-  grid-column: 3/4;
+.gal1-rating, .gal2-rating {
+  /*grid-column: 3/4;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
 }
-
+/*
 .gal2 {
-  display: grid;
+  /*display: grid;
   grid-template-columns: 1fr 1fr 2fr;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 73px;
+  align-items: flex-end;
   border-top: 2px solid var(--grey-border);
 }
+
 .gal2-img {
-  grid-column: 1/2;
+  /*grid-column: 1/2;
+  align-self: center;
 }
 
 .gal2-description {
-  grid-column: 2/3;
+  /*grid-column: 2/3;
+  margin-right: auto;
+  margin-left: 30px;
 }
 
 .gal2-rating {
-  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
+  /*grid-column: 3/4;
 }
+*/
 
 .gal3 {
   display: grid;
@@ -418,6 +470,7 @@ grid-row: 1/2;
   border-top: 2px solid var(--grey-border);
   border-bottom: 2px solid var(--grey-border);
 }
+
 .gal3-img {
   grid-column: 1/2;
 }
