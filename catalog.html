@@ -3,101 +3,133 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Sedona catalog</title>
+  <title>Sedona main</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/180.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <script src="/js/script.js"></script>
 </head>
 
 <body class="page-body">
   <!--HEADER-->
-  <header class="main-header">
+  <header class="main-header container-fluid">
     <div class="container">
       <nav class="nav">
-      <ul class="site-nav">
-        <li class="nav-list-item1 nav-li"><a class="a" href="blank.html">Информация</a></li>
-        <li class="nav-list-item2 nav-li"><a class="a" href="catalog.html">Фото и видео</a></li>
-        <li class="nav-list-item3 nav-li"></li>
-        <li class="nav-list-item4 nav-li"><a class="a" href="blank.html">Карта штата</a></li>
-        <li class="nav-list-item5 nav-li"><a class="a" href="catalog.html">Гостиницы</a></li>
-      </ul>
-      <a class="nav-logo a" href="index.html">
-        <img src="img/logo.svg" width="138" height="70" alt="logo">
-      </a>
-    </nav>
-  </div>
+        <ul class="site-nav">
+          <li class="nav-list-item1 nav-li"><a class="link" href="blank.html">Информация</a></li>
+          <li class="nav-list-item2 nav-li"><a class="link" href="catalog.html">Фото и видео</a></li>
+          <li class="nav-list-item3 nav-li"></li>
+          <li class="nav-list-item4 nav-li"><a class="link" href="blank.html">Карта штата</a></li>
+          <li class="nav-list-item5 nav-li"><a class="link" href="catalog.html">Гостиницы</a></li>
+        </ul>
+        <a class="nav-logo" href="index.html">
+          <img src="img/logo.svg" width="138" height="70" alt="logo">
+        </a>
+      </nav>
+    </div>
   </header>
   <!--MAIN-->
-  <main class="container">
+  <main class="container-fluid">
+
     <section class="bc-catalog">
-      <form class="filter">
-        <fieldset class="fieldset1">
-          <legend>Инфраструктура:</legend>
-          <ul class="filter-list">
-            <li>
-              <label>
-                <input type="checkbox" name="pool" checked>
-                Бассейн
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="parking">
-                Парковка
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="wi-fi">
-                Wi-Fi
-              </label>
-          </ul>
-        </fieldset>
-        <fieldset class="fieldset2">
-          <legend>Тип жилья:</legend>
-          <ul class="filter-list">
-            <li>
-              <label>
-                <input type="checkbox" name="hotel" checked>
-                Гостиница
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="motel" checked>
-                Мотель
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" name="apartment" checked>
-                Апартаменты
-              </label>
-          </ul>
-        </fieldset>
-        <fieldset class="fieldset3">
-          <legend>Стоимость в сутки, ₽:</legend>
-          <label>от <input class="min-price" name="min-price" type="text" value="0"></label>
-          <label>до <input class="max-price" name="max-price" type="text" value="3000"></label> <br>
-          <div class="fieldset-filter-btn"><button class="filter-btn">Показать</button></div>
-        </fieldset>
-      </form>
+      <div class="container">
+        <h1 class="visually-hidden">Седона выбор услуг</h1>
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="fieldset1">
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="pool"
+                  id="filter-pool" checked>
+                <label for="filter-pool">Бассейн</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="parking"
+                  id="filter-parking">
+                <label for="filter-parking">Парковка</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="wi-fi"
+                  id="filter-wi-fi">
+                <label for="filter-wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="fieldset2">
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hotel"
+                  id="filter-hotel" checked>
+                <label for="filter-hotel">Гостиница</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="motel"
+                  id="filter-motel" checked>
+                <label for="filter-motel">Мотель</label>
+              </li>
+              <li class="filter-option filter-checkbox">
+                <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="apartment"
+                  id="filter-apartment" checked>
+                <label for="filter-apartment">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="fieldset3">
+            <legend>Стоимость в сутки, ₽:</legend>
+            <div class="range-filter">
+              <div class="price-controls">
+                <label class="min-price">
+                  <span>от</span> <input type="number" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  <span>до</span> <input type="number" name="max-price" value="3000">
+                </label>
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar" style="width: 75%; margin-left: 0%;"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0" style="left: 0%;"></div>
+                <div class="toggle toggle-max" tabindex="0" style="left: 70%;"></div>
+              </div>
+            </div>
+
+            <button class="show"><span>Показать</span></button>
+
+          </fieldset>
+        </form>
+      </div>
     </section>
     <section class="filter-2">
-      <div class="filter-res">
-        <ul class="filter-ul">
+      <div class="filter-sorting">
+        <ul class="filter-list">
           <li>НАЙДЕНО: 3</li>
           <li>СОРТИРОВКА:</li>
-          <li><a>ПО ЦЕНЕ</a></li>
-          <li><a>ПО ТИПУ</a></li>
-          <li><a>ПО РЕЙТИНГУ</a></li>
+          <li class="filter-sorting-item">
+            <input class="visually-hidden" type="radio" name="sorting-group" value="cost" id="by-price" checked>
+            <label for="by-price">ПО ЦЕНЕ</label>
+          </li>
+          <li class="filter-sorting-item">
+            <input class="visually-hidden" type="radio" name="sorting-group" value="type" id="by-type">
+            <label for="by-type">ПО ТИПУ</label>
+          </li>
+          <li class="filter-sorting-item">
+            <input class="visually-hidden" type="radio" name="sorting-group" value="reit" id="by-reit">
+            <label for="by-reit">ПО РЕЙТИНГУ</label>
+          </li>
         </ul>
         <div>
-          <img src='img/img-catalog/dir-up.svg' width='11' height='10' alt='up-dir'>
-          <img src='img/img-catalog/dir-down.svg' width='11' height='10' alt='down-dir'>
+          <svg class="up-dir" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
+          </svg>
+          <svg class="down-dir" width="11" height="10" viewBox="0 0 11 10" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.5 10L0 0H11" fill="#CACACA" />
+          </svg>
         </div>
       </div>
       <div class="gallery">
@@ -106,12 +138,34 @@
             <img src="img/img-catalog/amara.jpg" width="135" height="90" alt="Amara Resort & Spa">
           </div>
           <div class="gal-description">
-            <h3>Amara Resort & Spa</h3>
-            <p><span>Гостиница</span><span>От 4000 ₽</span></p>
-            <button class="btn btn-details"><span>Подробнее</span></button><button class="btn btn-reserve"><span>Забронировать</span></button><br>
+            <h2>Amara Resort & Spa</h2>
+            <p class="house-cost"><span class="house">Гостиница</span><span class="cost">От 4000 ₽</span></p>
+            <button class="btn btn-details"><span>Подробнее</span></button><button
+              class="btn btn-reserve"><span>Забронировать</span></button><br>
           </div>
-          <div class="gal-rating">
-            <div>4 звезды</div>
+          <div class="gal-rating gal-rating-1">
+            <div>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+            </div>
             <div>Рейтинг: 8,5</div>
           </div>
         </div>
@@ -120,12 +174,29 @@
             <img src="img/img-catalog/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
           </div>
           <div class="gal-description">
-            <h3>Desert Quail Inn</h3>
-            <p><span>Мотель</span><span>От 3000 ₽</span></p>
-            <button class="btn btn-details"><span>Подробнее</span></button><button class="btn btn-reserve"><span>Забронировать</span></button><br>
+            <h2>Desert Quail Inn</h2>
+            <p class="house-cost"><span class="house">Мотель</span><span class="cost">От 3000 ₽</span></p>
+            <button class="btn btn-details"><span>Подробнее</span></button><button
+              class="btn btn-reserve"><span>Забронировать</span></button><br>
           </div>
-          <div class="gal-rating">
-            <div>3 звезды</div>
+          <div class="gal-rating gal-rating-2">
+            <div>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+            </div>
             <div>Рейтинг: 8,9</div>
           </div>
         </div>
@@ -134,12 +205,24 @@
             <img src="img/img-catalog/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
           </div>
           <div class="gal-description">
-            <h3>Villas at Poco Diablo</h3>
-            <p><span>Апартаменты</span><span>От 2000 ₽</span></p>
-            <button class="btn btn-details"><span>Подробнее</span></button><button class="btn btn-reserve"><span>Забронировать</span></button><br>
+            <h2>Villas at Poco Diablo</h2>
+            <p class="house-cost"><span class="house">Апартаменты</span><span class="cost">От 2000 ₽</span></p>
+            <button class="btn btn-details"><span>Подробнее</span></button><button
+              class="btn btn-reserve"><span>Забронировать</span></button><br>
           </div>
-          <div class="gal-rating">
-            <div>3 звезды</div>
+          <div class="gal-rating gal-rating-3">
+            <div>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+              <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z"
+                  fill="#81B3D2" />
+              </svg>
+            </div>
             <div>Рейтинг: 9,2</div>
           </div>
         </div>
@@ -149,58 +232,83 @@
   <!--FOOTER-->
   <footer class="main-footer">
     <div class="container">
-    <div class="contacts">
-      <div class="social-contacts">
-        <p>
-          <span class="visit">#visitSEDONA</span><br> <a class="a phone" href="tel:+78005558628">+7 800 555-86-28</a>
-        </p>
+      <div class="contacts">
+        <div class="social-contacts">
+          <p>
+            <span class="visit">#visitSEDONA</span><br> <a class="link phone" href="tel:+78005558628">+7 800
+              555-86-28</a>
+          </p>
+        </div>
+        <ul class='social-networks'>
+          <li>
+            <a class="social-btn tw link" href='https://twitter.com'>
+              <img src='img/icon-twitter.svg' width='25' height='25' alt='icon tw'>
+            </a>
+          </li>
+          <li>
+            <a class="social-btn fb link" href='https://www.facebook.com'>
+              <img src='img/icon-fb.svg' width='17' height='23' alt='icon fb'>
+            </a>
+          </li>
+          <li>
+            <a class="social-btn yt link" href='https://www.youtube.com'>
+              <img src='img/icon-youtube.svg' width='27' height='21' alt='icon youtube'>
+            </a>
+          </li>
+        </ul>
+        <div class="footer-site">
+          <div class="footer-copyright">
+            <a class="link" href="https://htmlacademy.ru">
+              <div><span class="website-by">Website by</span>
+                <svg class="logo-academy" width="115" height="34" viewBox="0 0 115 34" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0)">
+                    <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black" />
+                    <path
+                      d="M11.6466 4.52965C10.0863 4.52965 8.82534 5.23807 8.03454 6.26851H7.94905V0H5.91864V15.4566H7.94905V10.1541C7.94905 8.02886 9.27418 6.50466 11.2191 6.50466C13.0572 6.50466 14.1258 7.87858 14.1258 9.72478V15.4566H16.1563V9.35984C16.1563 6.41878 14.3396 4.52965 11.6466 4.52965Z"
+                      fill="black" />
+                    <path
+                      d="M26.6171 4.8303H21.8082V1.07349H19.7778V4.8303H17.8542V6.80531H19.7778V12.7947C19.7778 14.5121 20.7396 15.4567 22.4708 15.4567H26.6171V13.4602H22.8769C22.193 13.4602 21.8082 13.0738 21.8082 12.4083V6.80531H26.6171V4.8303Z"
+                      fill="black" />
+                    <path
+                      d="M41.1215 4.55103C39.497 4.55103 38.2576 5.34532 37.5736 6.61191H37.5095C36.8897 5.3668 35.7356 4.55103 34.154 4.55103C32.7434 4.55103 31.6746 5.30238 31.0336 6.35431H30.948V4.83011H29.0031V15.4565H31.0336V10.0038C31.0336 8.00729 32.0806 6.54752 33.6624 6.50458C35.1584 6.46164 36.0347 7.53502 36.0347 9.14507V15.4565H38.0652V9.83203C38.0652 7.44915 39.4758 6.50458 40.6941 6.50458C42.1688 6.50458 43.0452 7.53502 43.0452 9.14507V15.4565H45.0754V8.9304C45.0754 6.35431 43.6221 4.55103 41.1215 4.55103Z"
+                      fill="black" />
+                    <path
+                      d="M47.8271 12.7088C47.8271 14.4476 48.8103 15.4566 50.6269 15.4566H52.6359V13.4816H50.9261C50.2422 13.4816 49.8574 13.0952 49.8574 12.4297V0H47.8271V12.7088Z"
+                      fill="black" />
+                    <path
+                      d="M28.9048 19.7063H28.8192C28.027 18.6392 26.7425 17.8923 25.0295 17.8709C21.882 17.8282 19.6338 20.1544 19.6338 23.441C19.6338 26.749 21.9248 29.0752 25.008 29.0326C26.7637 29.0111 28.027 28.2215 28.8192 27.0903H28.9048V28.7336H30.9177V18.1697H28.9048V19.7063ZM25.3077 27.0691C23.081 27.0691 21.6679 25.4471 21.6679 23.441C21.6679 21.435 23.081 19.813 25.3077 19.813C27.4703 19.813 28.8836 21.435 28.8836 23.441C28.8836 25.4259 27.4703 27.0691 25.3077 27.0691Z"
+                      fill="black" />
+                    <path
+                      d="M44.2095 22.0111C43.717 19.6208 41.5973 17.8708 38.8139 17.8708C35.4524 17.8708 33.2042 20.3251 33.2042 23.4409C33.2042 26.5567 35.4524 29.0325 38.8139 29.0325C41.5973 29.0325 43.717 27.2397 44.2095 24.8281H42.0898C41.6617 26.1727 40.3984 27.0903 38.8354 27.0903C36.6513 27.0903 35.2381 25.447 35.2381 23.4409C35.2381 21.4349 36.6513 19.8129 38.8354 19.8129C40.4625 19.8129 41.6617 20.7733 42.0898 22.0111H44.2095Z"
+                      fill="black" />
+                    <path
+                      d="M55.0836 19.7063H54.998C54.2058 18.6392 52.921 17.8923 51.2081 17.8709C48.0607 17.8282 45.8125 20.1544 45.8125 23.441C45.8125 26.749 48.1036 29.0752 51.1866 29.0326C52.9425 29.0111 54.2058 28.2215 54.998 27.0903H55.0836V28.7336H57.0962V18.1697H55.0836V19.7063ZM51.4866 27.0691C49.2596 27.0691 47.8466 25.4471 47.8466 23.441C47.8466 21.435 49.2596 19.813 51.4866 19.813C53.6491 19.813 55.0622 21.435 55.0622 23.441C55.0622 25.4259 53.6491 27.0691 51.4866 27.0691Z"
+                      fill="black" />
+                    <path
+                      d="M68.6538 19.813H68.5682C67.776 18.6819 66.4483 17.8923 64.7568 17.871C61.6738 17.8283 59.3827 20.1545 59.3827 23.4624C59.3827 26.749 61.6309 29.0753 64.7783 29.0326C66.4483 29.0111 67.776 28.2642 68.5468 27.1972H68.6538V28.7336H70.6665V13.3679H68.6538V19.813ZM65.0568 27.0904C62.8298 27.0904 61.4168 25.4685 61.4168 23.4624C61.4168 21.4563 62.8298 19.8343 65.0568 19.8343C67.2193 19.8343 68.6324 21.4776 68.6324 23.4624C68.6324 25.4685 67.2193 27.0904 65.0568 27.0904Z"
+                      fill="black" />
+                    <path
+                      d="M78.3297 17.8708C75.0752 17.8708 72.8483 20.3678 72.8483 23.4623C72.8483 26.4714 74.9467 29.0325 78.3724 29.0325C80.8561 29.0325 82.8475 27.6879 83.5541 25.447H81.4342C80.9634 26.4502 79.8286 27.0903 78.4582 27.0903C76.5312 27.0903 75.1608 25.8098 75.0108 24.1666H83.7682C84.0464 20.6452 81.8412 17.8708 78.3297 17.8708ZM78.2868 19.8129C79.9783 19.8129 81.2416 20.8586 81.5627 22.3739H75.0538C75.3534 20.88 76.6168 19.8129 78.2868 19.8129Z"
+                      fill="black" />
+                    <path
+                      d="M98.1985 17.8921C96.5713 17.8921 95.3295 18.6817 94.6443 19.9409H94.5799C93.9591 18.703 92.8029 17.8921 91.2184 17.8921C89.8054 17.8921 88.7347 18.639 88.0924 19.6848H88.0068V18.1695H86.0583V28.7334H88.0924V23.3128C88.0924 21.328 89.1417 19.8768 90.7261 19.8341C92.2247 19.7915 93.1028 20.8585 93.1028 22.4591V28.7334H95.1368V23.1421C95.1368 20.7732 96.5499 19.8341 97.7703 19.8341C99.2477 19.8341 100.125 20.8585 100.125 22.4591V28.7334H102.16V22.2457C102.16 19.6848 100.704 17.8921 98.1985 17.8921Z"
+                      fill="black" />
+                    <path
+                      d="M109.441 27.0477L105.801 18.1697H103.553L108.392 29.7368L108.371 29.7794C108.028 30.6544 107.643 30.9745 106.701 30.9745H104.196V33.0019H106.701C108.542 33.0019 109.527 32.1696 110.212 30.3769L114.88 18.1697H112.803L109.441 27.0477Z"
+                      fill="black" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="115" height="33.0294" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-      <ul class='social-networks'>
-        <li>
-          <a class="social-btn tw a" href='#'>
-            <img src='img/icon-twitter.svg' width='25' height='25' alt='icon tw'>
-          </a>
-        </li>
-        <li>
-          <a class="social-btn fb a" href='#'>
-            <img src='img/icon-fb.svg' width='17' height='23' alt='icon fb'>
-          </a>
-        </li>
-        <li>
-          <a class="social-btn yt a" href='#'>
-            <img src='img/icon-youtube.svg' width='27' height='21' alt='icon youtube'>
-          </a>
-        </li>
-      </ul>
-      <div class="footer-site">
-        <p class="footer-copyright">
-          <a class="a" href="#">
-            <p><span class="website-by">Website by</span> <svg class="logo-academy" width="115" height="34" viewBox="0 0 115 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0)">
-              <path d="M0 12.8806V15.4567H2.45789V12.8806H0Z" fill="black"/>
-              <path d="M11.6466 4.52965C10.0863 4.52965 8.82534 5.23807 8.03454 6.26851H7.94905V0H5.91864V15.4566H7.94905V10.1541C7.94905 8.02886 9.27418 6.50466 11.2191 6.50466C13.0572 6.50466 14.1258 7.87858 14.1258 9.72478V15.4566H16.1563V9.35984C16.1563 6.41878 14.3396 4.52965 11.6466 4.52965Z" fill="black"/>
-              <path d="M26.6171 4.8303H21.8082V1.07349H19.7778V4.8303H17.8542V6.80531H19.7778V12.7947C19.7778 14.5121 20.7396 15.4567 22.4708 15.4567H26.6171V13.4602H22.8769C22.193 13.4602 21.8082 13.0738 21.8082 12.4083V6.80531H26.6171V4.8303Z" fill="black"/>
-              <path d="M41.1215 4.55103C39.497 4.55103 38.2576 5.34532 37.5736 6.61191H37.5095C36.8897 5.3668 35.7356 4.55103 34.154 4.55103C32.7434 4.55103 31.6746 5.30238 31.0336 6.35431H30.948V4.83011H29.0031V15.4565H31.0336V10.0038C31.0336 8.00729 32.0806 6.54752 33.6624 6.50458C35.1584 6.46164 36.0347 7.53502 36.0347 9.14507V15.4565H38.0652V9.83203C38.0652 7.44915 39.4758 6.50458 40.6941 6.50458C42.1688 6.50458 43.0452 7.53502 43.0452 9.14507V15.4565H45.0754V8.9304C45.0754 6.35431 43.6221 4.55103 41.1215 4.55103Z" fill="black"/>
-              <path d="M47.8271 12.7088C47.8271 14.4476 48.8103 15.4566 50.6269 15.4566H52.6359V13.4816H50.9261C50.2422 13.4816 49.8574 13.0952 49.8574 12.4297V0H47.8271V12.7088Z" fill="black"/>
-              <path d="M28.9048 19.7063H28.8192C28.027 18.6392 26.7425 17.8923 25.0295 17.8709C21.882 17.8282 19.6338 20.1544 19.6338 23.441C19.6338 26.749 21.9248 29.0752 25.008 29.0326C26.7637 29.0111 28.027 28.2215 28.8192 27.0903H28.9048V28.7336H30.9177V18.1697H28.9048V19.7063ZM25.3077 27.0691C23.081 27.0691 21.6679 25.4471 21.6679 23.441C21.6679 21.435 23.081 19.813 25.3077 19.813C27.4703 19.813 28.8836 21.435 28.8836 23.441C28.8836 25.4259 27.4703 27.0691 25.3077 27.0691Z" fill="black"/>
-              <path d="M44.2095 22.0111C43.717 19.6208 41.5973 17.8708 38.8139 17.8708C35.4524 17.8708 33.2042 20.3251 33.2042 23.4409C33.2042 26.5567 35.4524 29.0325 38.8139 29.0325C41.5973 29.0325 43.717 27.2397 44.2095 24.8281H42.0898C41.6617 26.1727 40.3984 27.0903 38.8354 27.0903C36.6513 27.0903 35.2381 25.447 35.2381 23.4409C35.2381 21.4349 36.6513 19.8129 38.8354 19.8129C40.4625 19.8129 41.6617 20.7733 42.0898 22.0111H44.2095Z" fill="black"/>
-              <path d="M55.0836 19.7063H54.998C54.2058 18.6392 52.921 17.8923 51.2081 17.8709C48.0607 17.8282 45.8125 20.1544 45.8125 23.441C45.8125 26.749 48.1036 29.0752 51.1866 29.0326C52.9425 29.0111 54.2058 28.2215 54.998 27.0903H55.0836V28.7336H57.0962V18.1697H55.0836V19.7063ZM51.4866 27.0691C49.2596 27.0691 47.8466 25.4471 47.8466 23.441C47.8466 21.435 49.2596 19.813 51.4866 19.813C53.6491 19.813 55.0622 21.435 55.0622 23.441C55.0622 25.4259 53.6491 27.0691 51.4866 27.0691Z" fill="black"/>
-              <path d="M68.6538 19.813H68.5682C67.776 18.6819 66.4483 17.8923 64.7568 17.871C61.6738 17.8283 59.3827 20.1545 59.3827 23.4624C59.3827 26.749 61.6309 29.0753 64.7783 29.0326C66.4483 29.0111 67.776 28.2642 68.5468 27.1972H68.6538V28.7336H70.6665V13.3679H68.6538V19.813ZM65.0568 27.0904C62.8298 27.0904 61.4168 25.4685 61.4168 23.4624C61.4168 21.4563 62.8298 19.8343 65.0568 19.8343C67.2193 19.8343 68.6324 21.4776 68.6324 23.4624C68.6324 25.4685 67.2193 27.0904 65.0568 27.0904Z" fill="black"/>
-              <path d="M78.3297 17.8708C75.0752 17.8708 72.8483 20.3678 72.8483 23.4623C72.8483 26.4714 74.9467 29.0325 78.3724 29.0325C80.8561 29.0325 82.8475 27.6879 83.5541 25.447H81.4342C80.9634 26.4502 79.8286 27.0903 78.4582 27.0903C76.5312 27.0903 75.1608 25.8098 75.0108 24.1666H83.7682C84.0464 20.6452 81.8412 17.8708 78.3297 17.8708ZM78.2868 19.8129C79.9783 19.8129 81.2416 20.8586 81.5627 22.3739H75.0538C75.3534 20.88 76.6168 19.8129 78.2868 19.8129Z" fill="black"/>
-              <path d="M98.1985 17.8921C96.5713 17.8921 95.3295 18.6817 94.6443 19.9409H94.5799C93.9591 18.703 92.8029 17.8921 91.2184 17.8921C89.8054 17.8921 88.7347 18.639 88.0924 19.6848H88.0068V18.1695H86.0583V28.7334H88.0924V23.3128C88.0924 21.328 89.1417 19.8768 90.7261 19.8341C92.2247 19.7915 93.1028 20.8585 93.1028 22.4591V28.7334H95.1368V23.1421C95.1368 20.7732 96.5499 19.8341 97.7703 19.8341C99.2477 19.8341 100.125 20.8585 100.125 22.4591V28.7334H102.16V22.2457C102.16 19.6848 100.704 17.8921 98.1985 17.8921Z" fill="black"/>
-              <path d="M109.441 27.0477L105.801 18.1697H103.553L108.392 29.7368L108.371 29.7794C108.028 30.6544 107.643 30.9745 106.701 30.9745H104.196V33.0019H106.701C108.542 33.0019 109.527 32.1696 110.212 30.3769L114.88 18.1697H112.803L109.441 27.0477Z" fill="black"/>
-              </g>
-              <defs>
-              <clipPath id="clip0">
-              <rect width="115" height="33.0294" fill="white"/>
-              </clipPath>
-              </defs>
-              </svg>
-              </p>
-          </a>
-        </p>
-      </div>
-    </div>
     </div>
   </footer>
 
