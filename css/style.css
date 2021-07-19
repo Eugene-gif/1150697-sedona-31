@@ -96,11 +96,6 @@ img {
   padding: 0px;
 }
 
-/*.nav {
-  display:block;
-  position: relative;
-  left: -35px;
-}*/
 .site-nav {
   display: flex;
   flex-direction: row;
@@ -139,38 +134,13 @@ img {
   grid-column: 4/5;
 }
 
-
-
 .nav-logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translatex(-50%);
-}
-
-/*Сделать HOOVERы*/
-
-/*Отображение иконки*/
-/*
-.login-link::before {
-  content: "";
   position: absolute;
-  width: 16px;
-  height: 18px;
-  background-image: url("img/login.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
+  top: 0;
+  left: 50%;
+  transform: translatex(-50%);
 }
-*/
 
-/*Наведение на иконку*/
-/*
-.login-link:hover::before,
-.login-link:focus::before,
-.login-link:active::before {
-  opacity: 1;
-}
-*/
 .familiarity {
   display: grid;
   grid-template-rows: 510px 215px;
@@ -184,7 +154,6 @@ img {
   background-repeat: no-repeat;
   background-position: top center;
   min-width: 1200px;
-  /*height: 510px;*/
   grid-template-columns: 1fr;
 }
 
@@ -230,8 +199,6 @@ img {
   font-weight: 400;
   margin-top: 35px;
 }
-
-
 
 .advantages {
   display: grid;
@@ -373,34 +340,28 @@ img {
 }
 
 .main-footer {
-  padding-top: 0px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .contacts {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   justify-content: space-between;
   max-width: 1200px;
-  /*width: 1200px; Нужно ли задавать ширину таким образом?*/
   list-style: none;
-  margin: 30px 0;
-
 }
 
 .social-contacts {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.social-contacts p {
-  font-size: 21px;
-  line-height: 26px;
-  text-align: center;
-
-}
-
-.visit {
-  position: relative;
-  top: -20px;
+.phone {
+  padding: 0px;
 }
 
 .social-networks {
@@ -541,17 +502,17 @@ img {
   user-select: none;
 }
 
-.filter-input-checkbox:hover + label,
-.filter-input-checkbox:focus + label {
+.filter-input-checkbox:hover+label,
+.filter-input-checkbox:focus+label {
   color: var(--basic-blue);
 }
 
-.filter-input-checkbox:active + label {
+.filter-input-checkbox:active+label {
   color: var(--basic-black);
   opacity: 0.3;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox+label::before {
   content: "";
   position: absolute;
   left: -42px;
@@ -562,7 +523,7 @@ img {
   border-radius: 3px;
 }
 
-.filter-input-checkbox:checked + label::after {
+.filter-input-checkbox:checked+label::after {
   content: "";
   position: absolute;
   top: 3px;
@@ -759,24 +720,25 @@ img {
   opacity: 1;
 }
 
-.filter-sorting-item input:checked ~ label {
+.filter-sorting-item input:checked~label {
   color: var(--basic-blue);
   border: none;
   opacity: 1;
 }
 
 .up-dir {
-margin-right: 12px;
+  margin-right: 12px;
 }
 
-.up-dir, .down-dir {
+.up-dir,
+.down-dir {
   cursor: pointer;
 }
 
 .up-dir:hover path,
 .up-dir:focus path,
 .down-dir:hover path,
-.down-dir:focus path  {
+.down-dir:focus path {
   fill: var(--basic-black);
 }
 
@@ -829,8 +791,7 @@ margin-right: 12px;
 }
 
 .cost {
-  margin-right: auto;
-  margin-left: 20px;
+  margin-right: 90px;
 }
 
 .gal-rating {
@@ -842,14 +803,14 @@ margin-right: 12px;
 
 .gal-rating div:nth-child(1) {
   align-self: flex-end;
-  }
+}
 
 .gal-rating div:nth-child(2) {
   background-color: var(--basic-grey2);
   color: var(--special-grey3);
   padding: 3px 15px;
   align-self: flex-end;
-  }
+}
 
 .btn {
   text-transform: uppercase;
@@ -898,9 +859,6 @@ margin-right: 12px;
   opacity: 0.3;
 }
 
-
-
-
 /*M O D A L*/
 
 .search-hotels {
@@ -923,12 +881,8 @@ margin-right: 12px;
   padding: 0;
 }
 
-.modal-window-show {
-  display: block;
-}
-
 .modal-window {
-  /*display: none;*/
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -968,11 +922,16 @@ margin-right: 12px;
   text-transform: uppercase;
 }
 
-button, input {
+button,
+input {
   overflow: visible;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
